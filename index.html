@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Document</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <h1>Student data table</h1>
+            <div class="col-sm-12">
+                <button class="btn btn-primary float-right mb-2" id="createStudent">Create Student</button>
+            </div>
+            <div class="col-sm-12">
+                <div class="float-right">
+                    <input type="text" class="form-control search" placeholder="Search Here">
+                </div>
+                <table class="table table-bordered table-striped" id="studentTable">
+                    <thead>
+                        <tr>
+                            <th rowspan="2">S.no</th>
+                            <th rowspan="2" data-sort="rollno">Roll no</th>
+                            <th rowspan="2" data-sort="name">Name</th>
+                            <th colspan="5" class="text-center">Marks</th>
+                            <th rowspan="2" data-sort="total">Total</th>
+                            <th rowspan="2" data-sort="rank">Rank</th>
+                            <th rowspan="2"></th>
+                        </tr>
+                        <tr>
+
+                            <th data-sort="marks.english">English</th>
+                            <th data-sort="marks.french">French</th>
+                            <th data-sort="marks.japanese">Japanese</th>
+                            <th data-sort="marks.germen">Germen</th>
+                            <th data-sort="marks.spanish">Spanish</th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+
+
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </div>
+
+
+    <div class="modal fade" id="studentModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label>Roll no</label>
+                                <input type="text" class="form-control student-rollno">
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label>Name</label>
+                                <input type="text" class="form-control student-name">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label>English</label>
+                                <input type="text" class="form-control student-marks--english">
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label>French</label>
+                                <input type="text" class="form-control student-marks--french">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label>Japanese</label>
+                                <input type="text" class="form-control student-marks--japanese">
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label>Germen</label>
+                                <input type="text" class="form-control student-marks--germen">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label>Spanish</label>
+                                <input type="text" class="form-control student-marks--spanish">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary saveStudent">Save student</button>
+                    <button type="button" class="btn btn-primary updateStudent">Update student</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content modal-sm">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+                </div>
+                <div class="modal-body">
+                    <span class="rowId d-none"></span>
+                    <p>Are you sure u want to delete the student <strong class="text-danger student-name"></strong></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary deleteStudentBtn">Delete student</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/popper.js/dist/umd/popper.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="scripts/script.js"></script>
+    <script src="scripts/create-student.js"></script>
+    <script src="scripts/read-student.js"></script>
+    <script src="scripts/update-student.js"></script>
+    <script src="scripts/delete-student.js"></script>
+    <script src="scripts/search.js"></script>
+    <script src="scripts/sort.js"></script>
+</body>
+
+</html>

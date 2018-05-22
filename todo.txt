@@ -1,0 +1,23 @@
+1.task:To create a student DB that will display student roll num,student name, marks,total and Rank.
+2.Table displaytable can sort and filter.
+3.there will be a student create button which will open a popup with empty values.
+on each row of a student will have update button and delete button.
+4.On click update button which will open a popup with student value of the row.
+5.On click of delete button a conformation msg will popup and if clicked the student will be removed from the DB.
+
+
+1. two lib are used 1.bootstrap 2.jquery
+2.we dont have a server
+3. we are going to access the DB directly(never recommed)only for testing purpose
+4 the Db is mongodb is offered free my mlab.com 
+alHwuwXS7ySwUO0teRHNdeilhqQO5f5S
+
+
+The hierarchy of mongodb 
+1.DB 2. collection 3.data
+To get list of students from databases 
+method:"GET"
+https://api.mlab.com/api/1/databases/students/collections/marks?apiKey=alHwuwXS7ySwUO0teRHNdeilhqQO5f5S;
+to insert a student into DB
+method:"POST"
+url: "https://api.mlab.com/api/1/databases/students/collections/marks?apiKey=alHwuwXS7ySwUO0teRHNdeilhqQO5f5S"
